@@ -13,7 +13,9 @@
   "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "config": "^3.3.11",
     "cors": "^2.8.5",
+    "debug": "^4.3.5",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
