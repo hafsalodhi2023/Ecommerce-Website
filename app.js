@@ -1,34 +1,44 @@
-// Import required modules
+/*<--------------------------------------------------------------------->*/
+// Imported required modules
+/*<--------------------------------------------------------------------->*/
 import express from "express";
 import cors from "cors";
-import mongodbConnection from "./config/mongodb-connnection.js";
+import mongodbConnection from "./config/mongodb-connnection.config.js";
 import debug from "debug";
 
-// Create an instance of the Express application
-const app = express();
-const dbgr = debug("development:server");
+/*<--------------------------------------------------------------------->*/
+// All Routers Imports
+/*<--------------------------------------------------------------------->*/
+import clientRouter from "./routers/client.router.js";
 
-// Configure middleware for parsing request bodies and serving static files
+/*<--------------------------------------------------------------------->*/
+// All Variables
+/*<--------------------------------------------------------------------->*/
+const app = express(); // Create an instance of the Express application
+const dbgr = debug("development:server"); // Create an instance of debugger to debug messages
+
+/*<--------------------------------------------------------------------->*/
+// Configure middleware for parsing request bodies, stopping cors policy messages and serving static files
+/*<--------------------------------------------------------------------->*/
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use(cors()); // Configure CORS (Cross-Origin Resource Sharing) options
 
-// Configure CORS (Cross-Origin Resource Sharing) options
-app.use(
-  cors({
-    origin: "http://localhost:8080", // Specify the allowed origin
-    methods: ["GET", "POST"], // Specify the allowed HTTP methods
-    credentials: true, // Allow sending credentials (cookies, headers, etc.)
-  })
-);
+/*<--------------------------------------------------------------------->*/
+// All Routers
+/*<--------------------------------------------------------------------->*/
+app.use("/api/client", clientRouter); // Client Router
 
 // Define a route for the root URL
 app.get("/", (req, res) => {
-  res.render("index"); // Render the "index" view
+  res.json({ status: true }); // Render the "index" view
 });
 
+/*<--------------------------------------------------------------------->*/
 // Start the server and listen on port 3000
+/*<--------------------------------------------------------------------->*/
 app.listen(8080, () => {
   dbgr("Server is running on port 8080"); // Log a message when the server starts
 });
