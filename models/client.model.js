@@ -25,19 +25,9 @@ const clientSchema = mongoose.Schema({
   password: {
     type: String,
     required: true, // Password is required
-    validate: {
-      validator: function (value) {
-        // Regular expression for validating a strong password
-        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-          value
-        );
-      },
-      message: (props) =>
-        "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.", // Custom error message for invalid password
-    },
   },
   mobile_number: {
-    type: Number, // Corrected type for mobile_number
+    type: String, // Corrected type for mobile_number
     required: true, // Mobile number is required
   },
   address: {
@@ -58,7 +48,6 @@ const clientSchema = mongoose.Schema({
   },
   photo: {
     type: String,
-    default: "default.png", // Default photo is default.png
   },
   cart: {
     type: Array,

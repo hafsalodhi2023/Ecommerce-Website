@@ -1,15 +1,16 @@
 // All Imports
-import Model from "../models/client.model.js";
-import debug from "debug";
-import fs from "fs";
+import Model from "../models/client.model.js"; // Import the client model
+import debug from "debug"; // Import the debug module for logging
+import fs from "fs"; // Import the file system module for file operations
+import bcryptor from "../utils/password-bcryptor.utils.js";
 
 // All Variables
-const dbgr = debug("development:controllers:client");
+const dbgr = debug("development:controllers:client"); // Create a debug instance for logging
 
+// Register a new client
 const register = async (req, res) => {
   try {
-    dbgr("Registering a new client...");
-    dbgr(req.file);
+    dbgr("Registering a new client..."); // Log the start of the registration process
     const {
       first_name,
       last_name,
@@ -20,8 +21,9 @@ const register = async (req, res) => {
       country,
       province,
       city,
-    } = req.body;
+    } = req.body; // Destructure the request body
 
+    // Check if any required fields are missing
     if (
       !first_name ||
       !email ||
@@ -32,7 +34,7 @@ const register = async (req, res) => {
       !province ||
       !city
     ) {
-      fs.unlinkSync(`./public/images/${req.file.filename}`);
+      if (req.file) fs.unlinkSync(`./public/images/${req.file.filename}`); // Remove the uploaded file if any required fields are missing
       return res.status(400).json({
         success: false,
         error: true,
@@ -40,10 +42,11 @@ const register = async (req, res) => {
         data: null,
       });
     }
-    const emailVerification = await Model.findOne({ email });
 
+    // Check if the email already exists
+    const emailVerification = await Model.findOne({ email });
     if (emailVerification) {
-      fs.unlinkSync(`./public/images/${req.file.filename}`);
+      if (req.file) fs.unlinkSync(`./public/images/${req.file.filename}`); // Remove the uploaded file if the email already exists
       return res.status(400).json({
         success: false,
         error: true,
@@ -52,20 +55,50 @@ const register = async (req, res) => {
       });
     }
 
+    if (req.file) {
+      if (
+        req.file.mimetype !== "image/jpeg" &&
+        req.file.mimetype !== "image/png" &&
+        req.file.mimetype !== "image/jpg"
+      ) {
+        fs.unlinkSync(`./public/images/${req.file.filename}`); // Remove the uploaded file if the type is invalid
+        return res.status(400).json({
+          success: false,
+          error: true,
+          message: "Only JPEG, JPG and PNG files are allowed.",
+        });
+      }
+
+      if (req.file.size > 1024 * 1024 * 1) {
+        fs.unlinkSync(`./public/images/${req.file.filename}`); // Remove the uploaded file if the size is too large
+        return res.status(400).json({
+          success: false,
+          error: true,
+          message: "The file size must be less than 1MB.",
+        });
+      }
+    }
+
+    let corrected_mobile_number = mobile_number.replace(0, "+92"); // Correct the mobile number format
+
+    const bcryptedPassword = await bcryptor(password); // Hash the password
+
+    // Create a new client
     const client = await Model.create({
       first_name,
       last_name,
       email,
-      password,
-      mobile_number,
+      password: bcryptedPassword,
+      mobile_number: corrected_mobile_number,
       address,
       country,
       province,
       city,
-      photo: req.file.filename,
+      photo: req.file ? req.file.filename : "default.png", // Save the uploaded file name
     });
-    dbgr("Client successfully registered!");
+    dbgr("Client successfully registered!"); // Log the successful registration
 
+    // Return the created client
     return res.status(201).json({
       success: true,
       error: false,
@@ -73,12 +106,14 @@ const register = async (req, res) => {
       data: client,
     });
   } catch (error) {
-    dbgr(error);
+    dbgr(error); // Log any errors
 
+    if (req.file) fs.unlinkSync(`./public/images/${req.file.filename}`); // Remove the uploaded file if there's an error
+    // Return an internal server error
     return res.status(500).json({
       success: false,
       error: true,
-      message: "Internal sever error!",
+      message: error.message,
       data: null,
     });
   }
@@ -86,5 +121,5 @@ const register = async (req, res) => {
 
 // All Exports
 export default {
-  register,
+  register, // Export the register function
 };
