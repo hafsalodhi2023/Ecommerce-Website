@@ -49,6 +49,10 @@ const clientSchema = mongoose.Schema({
   photo: {
     type: String,
   },
+  auth_token: {
+    type: String,
+    required: true, // Auth token is required
+  },
   cart: {
     type: Array,
     default: [],

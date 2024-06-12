@@ -5,6 +5,8 @@ import express from "express";
 import cors from "cors";
 import mongodbConnection from "./config/mongodb-connnection.config.js";
 import debug from "debug";
+import dotenv from "dotenv";
+dotenv.config();
 
 /*<--------------------------------------------------------------------->*/
 // All Routers Imports

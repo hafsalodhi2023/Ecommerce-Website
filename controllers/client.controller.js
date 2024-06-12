@@ -3,6 +3,7 @@ import Model from "../models/client.model.js"; // Import the client model
 import debug from "debug"; // Import the debug module for logging
 import fs from "fs"; // Import the file system module for file operations
 import bcryptor from "../utils/password-bcryptor.utils.js";
+import jwtGenerator from "../utils/jwt-generator.utils.js";
 
 // All Variables
 const dbgr = debug("development:controllers:client"); // Create a debug instance for logging
@@ -82,6 +83,7 @@ const register = async (req, res) => {
     let corrected_mobile_number = mobile_number.replace(0, "+92"); // Correct the mobile number format
 
     const bcryptedPassword = await bcryptor(password); // Hash the password
+    const authToken = jwtGenerator({ email }); // Generate a JSON Web Token for the client
 
     // Create a new client
     const client = await Model.create({
@@ -95,6 +97,7 @@ const register = async (req, res) => {
       province,
       city,
       photo: req.file ? req.file.filename : "default.png", // Save the uploaded file name
+      auth_token: authToken, // Generate a JSON Web Token for the client
     });
     dbgr("Client successfully registered!"); // Log the successful registration
 
