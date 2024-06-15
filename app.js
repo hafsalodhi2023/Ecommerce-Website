@@ -27,10 +27,10 @@ app.use("/api/dress", dressRouter); // Dress Router
 
 // Define a route for the root URL
 app.get("/", (req, res) => {
-  res.render("index"); // Render the "index" view
+    res.render("index", { url: "http://localhost:8080" }); // Render the "index" view
 });
 
 // Start the server and listen on port 3000
 app.listen(8080, () => {
-  dbgr("Server is running on port 8080"); // Log a message when the server starts
+    dbgr("Server is running on port 8080"); // Log a message when the server starts
 });
