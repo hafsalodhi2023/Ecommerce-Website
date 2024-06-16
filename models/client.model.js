@@ -70,7 +70,7 @@ const clientSchema = new Schema(
       default: Date.now, // Default value is the current date/time
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 // All Exports

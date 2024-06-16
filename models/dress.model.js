@@ -95,7 +95,7 @@ const DressSchema = new Schema(
       default: null,
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 // Create the model from the schema
