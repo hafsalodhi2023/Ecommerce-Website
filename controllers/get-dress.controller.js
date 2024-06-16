@@ -5,7 +5,7 @@ const dbgr = debug("development:get:dress:controller"); // Create an instance of
 
 const getAll = async (req, res) => {
   try {
-    dbgr("User getting dresses....");
+    dbgr("User getting dresses...");
     const dresses = await Model.find(); // Find all dresses in the database
     res.status(200).json({
       success: true,
