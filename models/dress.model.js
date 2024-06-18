@@ -59,7 +59,25 @@ const DressSchema = new Schema(
                 message: (props) =>
                     `${props.value} is not a valid SKU! It should be in the format 'SKU-xxx'.`,
             },
-            sizes: [SizeSchema],
+        },
+        sizes: [SizeSchema],
+        stuffType: { type: String, required: true },
+        clothCategory: {
+            type: String,
+            enum: [
+                "01 Piece",
+                "02 Piece",
+                "03 Piece",
+                "04 Piece",
+                "Top",
+                "Bottom",
+            ],
+            required: true,
+        },
+        MadeType: {
+            type: String,
+            enum: ["Stiched", "Un-Stiched"],
+            required: true,
         },
         discount: {
             type: Number,

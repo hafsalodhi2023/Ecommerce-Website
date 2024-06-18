@@ -5,6 +5,6 @@ const router = express.Router();
 
 router
     .get("/getall", dressController.getAll)
-    .get("/get/:id", dressController.getOne);
+    .get("/get", dressController.getOne);
 
 export default router;

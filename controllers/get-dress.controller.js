@@ -23,8 +23,9 @@ const getAll = async (req, res) => {
 };
 const getOne = async (req, res) => {
     try {
+        dbgr(req.query);
         dbgr("User getting dress...");
-        const dress = await Model.findById(req.params.id);
+        const dress = await Model.find(req.query);
         res.status(200).json({
             success: true,
             error: false,
