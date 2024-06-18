@@ -1,231 +1,282 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!--? Font Awesome Icons Started -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!--` Font Awesome Icons Ended -->
-    <!--? Google Fonts Started -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!--` Google Fonts Ended -->
-    <!--? Stylesheet Started -->
-    <link rel="stylesheet" href="<%= url %>/stylesheets/output.css" />
-    <!--` Stylesheet Ended -->
-    <!--? Favicon Started -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/images/favicons/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <!--` Favicon Ended -->
-    <title>Zubiz Shop</title>
-  </head>
 
-  <body>
-    <!--? Nav Started -->
-    <nav class="flex w-full items-center justify-center px-2 py-2">
-      <div class="ml-2 mr-2 flex w-1/3 items-center justify-start">
-        <i class="fa-solid fa-bars-staggered text-5xl text-color_3"></i>
-      </div>
-      <div class="m-2 flex w-1/3 items-center justify-center">
-        <img src="/images/logo.png" alt="Logo" class="w-20" />
-      </div>
-      <div class="ml-2 mr-2 flex w-1/3 items-center justify-end">
-        <i class="fa-solid fa-cart-shopping text-5xl text-color_3"></i>
-      </div>
-    </nav>
-    <!--` Nav Ended -->
-    <!--? Hero Section Started -->
-    <Section
-      id="hero"
-      class="flex w-full flex-col items-center justify-center gap-4 bg-color_4 px-2 py-5"
-    >
-      <h1
-        class="text-center font-[overlock] text-8xl font-semibold text-color_6"
-      >
-        Discover the Best <br />
-        Deals Online
-      </h1>
-      <h2 class="text-center font-[Poppins] text-2xl text-color_6">
-        Shop now and enjoy exclusive discounts <br />
-        on a wide range of products
-      </h2>
-      <a
-        href="#"
-        class="rounded-3xl bg-color_3 px-14 py-3 font-[Poppins] text-2xl text-color_6"
-        >Shop Now!</a
-      >
-    </Section>
-    <!--` Hero Section Ended -->
-    <!--? Section 1 Started -->
-    <section id="section-1">
-      <h1
-        class="px-2 pb-5 pt-10 text-center font-[overlock] text-6xl font-semibold text-color_3"
-      >
-        Discover the Power of <br />
-        Our Product
-      </h1>
-      <h2 class="px-20 text-center font-[Poppins] text-2xl text-color_3">
-        Our products are designed to revolutionize the way you shop online. With
-        cutting-edge technology and user-friendly interfaces, we provide an
-        unparalleled shopping experience.
-      </h2>
-      <!--? Card main div Started -->
+<head>
+  <!--? Font Awesome Icons Started -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--` Font Awesome Icons Ended -->
+  <!--? Google Fonts Started -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!--` Google Fonts Ended -->
+  <!--? Stylesheet Started -->
+  <link rel="stylesheet" href="<%= url %>/stylesheets/output.css" />
+  <!--` Stylesheet Ended -->
+  <!--? Favicon Started -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/images/favicons/site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <!--` Favicon Ended -->
+  <title>Zubiz Shop</title>
+</head>
 
-      <div
-        id="main_cards-div "
-        class="flex w-full flex-col items-center justify-center gap-10 py-24"
-      >
-        <!--? Card 1 Started -->
-        <div
-          class="card flex w-[40%] flex-col items-center justify-center gap-2"
-        >
-          <div class="img flex w-full items-center justify-center">
-            <img src="/images/shopping.png" alt="" />
-          </div>
-          <div class="text flex flex-col items-center justify-center gap-2">
-            <h2 class="text-center font-[Poppins] text-3xl font-semibold">
-              Seamless Shopping Experience
-            </h2>
-            <p class="text-center text-2xl">
-              Browse through our wide range of products effortlessly.
-            </p>
-          </div>
+<body>
+  <!--? Nav Started -->
+  <nav class="flex w-full items-center justify-center px-2 py-2">
+    <div class="ml-2 mr-2 flex w-1/3 items-center justify-start">
+      <i class="fa-solid fa-bars-staggered text-5xl text-color_3"></i>
+    </div>
+    <div class="m-2 flex w-1/3 items-center justify-center">
+      <img src="/images/logo.png" alt="Logo" class="w-20" />
+    </div>
+    <div class="ml-2 mr-2 flex w-1/3 items-center justify-end">
+      <i class="fa-solid fa-cart-shopping text-5xl text-color_3"></i>
+    </div>
+  </nav>
+  <!--` Nav Ended -->
+  <!--? Hero Section Started -->
+  <Section id="hero" class="flex w-full flex-col items-center justify-center gap-4 bg-color_4 px-2 py-5">
+    <h1 class="text-center font-[overlock] text-8xl font-semibold text-color_6">
+      Discover the Best <br />
+      Deals Online
+    </h1>
+    <h2 class="text-center font-[Poppins] text-2xl text-color_6">
+      Shop now and enjoy exclusive discounts <br />
+      on a wide range of products
+    </h2>
+    <a href="#" class="rounded-3xl bg-color_3 px-14 py-3 font-[Poppins] text-2xl text-color_6">Shop Now!</a>
+  </Section>
+  <!--` Hero Section Ended -->
+  <!--? Section 1 Started -->
+  <section id="section-1">
+    <h1 class="px-2 pb-5 pt-10 text-center font-[overlock] text-6xl font-semibold text-color_3">
+      Discover the Power of <br />
+      Our Product
+    </h1>
+    <h2 class="px-20 text-center font-[Poppins] text-2xl text-color_3">
+      Our products are designed to revolutionize the way you shop online. With
+      cutting-edge technology and user-friendly interfaces, we provide an
+      unparalleled shopping experience.
+    </h2>
+    <!--? Card main div Started -->
+
+    <div id="main_cards-div " class="flex w-full flex-col items-center justify-center gap-10 py-24">
+      <!--? Card 1 Started -->
+      <div class="card flex w-[40%] flex-col items-center justify-center gap-2">
+        <div class="img flex w-full items-center justify-center">
+          <img src="/images/shopping.png" alt="" />
         </div>
-        <!--` Card 1 Ended -->
-        <!--? Card 2 Started -->
-        <div
-          class="card flex w-[40%] flex-col items-center justify-center gap-2"
-        >
-          <div class="img flex w-full items-center justify-center">
-            <img src="/images/payment-method.png" alt="" />
-          </div>
-          <div class="text flex flex-col items-center justify-center gap-2">
-            <h2 class="text-center font-[Poppins] text-3xl font-semibold">
-              Trusted & Secured Payments
-            </h2>
-            <p class="text-center text-2xl">
-              Shop with confidence knowing your transactions are safe and
-              secure.
-            </p>
-          </div>
-        </div>
-        <!--` Card 2 Ended -->
-        <!--? Card 3 Started -->
-        <div
-          class="card flex w-[40%] flex-col items-center justify-center gap-2"
-        >
-          <div class="img flex w-full items-center justify-center">
-            <img src="/images/delivery-van.png" alt="" />
-          </div>
-          <div class="text flex flex-col items-center justify-center gap-2">
-            <h2 class="text-center font-[Poppins] text-3xl font-semibold">
-              Fast and Reliable Delivery
-            </h2>
-            <p class="text-center text-2xl">
-              Get your orders delivered to your doorstep in no time.
-            </p>
-          </div>
-        </div>
-        <!--` Card 3 Ended -->
-      </div>
-      <!--` Card main div Ended -->
-    </section>
-    <!--` Section 1 Started -->
-    <!--? Section 2 Started -->
-    <section id="section-2">
-      <!--? Filters div Started -->
-      <div class="flex w-full items-center justify-center gap-10 px-2 py-5">
-        <div
-          class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_4"
-        >
-          MOST POPULAR
-        </div>
-        <div
-          class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_2"
-        >
-          BEST SELLAR
-        </div>
-        <div
-          class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_2"
-        >
-          NEW ARRIVAL
+        <div class="text flex flex-col items-center justify-center gap-2">
+          <h2 class="text-center font-[Poppins] text-3xl font-semibold">
+            Seamless Shopping Experience
+          </h2>
+          <p class="text-center text-2xl">
+            Browse through our wide range of products effortlessly.
+          </p>
         </div>
       </div>
-      <!--` Filters div Ended -->
-      <!--? Product Cards main Div Started Started -->
-      <div
-        id="cards_main_div"
-        class="flex w-full items-center justify-evenly px-2 py-5"
-      >
-        <!--? Card 1 Started -->
-        <div id="card_main-div" class="">
-          <div id="image-div">
-            <img src="/images/pant1.png" alt="" />
-          </div>
-          <div
-            id="text-div"
-            class="flex w-full flex-col items-center justify-center"
-          >
-            <p class="font-[Poppins] text-2xl font-semibold">Man Jeans Pant</p>
-            <p class="font-[Poppins] text-xl">Variant</p>
-            <p class="font-[Poppins] text-2xl font-semibold">PKR. 5,000</p>
-            <a
-              href=""
-              class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4"
-              >Add to cart</a
-            >
-          </div>
+      <!--` Card 1 Ended -->
+      <!--? Card 2 Started -->
+      <div class="card flex w-[40%] flex-col items-center justify-center gap-2">
+        <div class="img flex w-full items-center justify-center">
+          <img src="/images/payment-method.png" alt="" />
         </div>
-        <!--` Card 1 Started -->
-        <!--? Card 1 Started -->
-        <div id="card_main-div" class="">
-          <div id="image-div">
-            <img src="/images/pant1.png" alt="" />
-          </div>
-          <div
-            id="text-div"
-            class="flex w-full flex-col items-center justify-center"
-          >
-            <p class="font-[Poppins] text-2xl font-semibold">Man Jeans Pant</p>
-            <p class="font-[Poppins] text-xl">Variant</p>
-            <p class="font-[Poppins] text-2xl font-semibold">PKR. 5,000</p>
-            <a
-              href=""
-              class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4"
-              >Add to cart</a
-            >
-          </div>
+        <div class="text flex flex-col items-center justify-center gap-2">
+          <h2 class="text-center font-[Poppins] text-3xl font-semibold">
+            Trusted & Secured Payments
+          </h2>
+          <p class="text-center text-2xl">
+            Shop with confidence knowing your transactions are safe and
+            secure.
+          </p>
         </div>
-        <!--` Card 1 Started -->
       </div>
-      <!--` Product Cards Ended -->
-    </section>
-    <!--` Section 2 Ended -->
-  </body>
+      <!--` Card 2 Ended -->
+      <!--? Card 3 Started -->
+      <div class="card flex w-[40%] flex-col items-center justify-center gap-2">
+        <div class="img flex w-full items-center justify-center">
+          <img src="/images/delivery-van.png" alt="" />
+        </div>
+        <div class="text flex flex-col items-center justify-center gap-2">
+          <h2 class="text-center font-[Poppins] text-3xl font-semibold">
+            Fast and Reliable Delivery
+          </h2>
+          <p class="text-center text-2xl">
+            Get your orders delivered to your doorstep in no time.
+          </p>
+        </div>
+      </div>
+      <!--` Card 3 Ended -->
+    </div>
+    <!--` Card main div Ended -->
+  </section>
+  <!--` Section 1 Started -->
+  <!--? Section 2 Started -->
+  <section id="section-2">
+    <!--? Filters div Started -->
+    <div class="flex w-full items-center justify-center gap-10 px-2 py-5">
+      <div class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_4">
+        MOST POPULAR
+      </div>
+      <div class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_2">
+        BEST SELLAR
+      </div>
+      <div class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_2">
+        NEW ARRIVAL
+      </div>
+    </div>
+    <!--` Filters div Ended -->
+    <!--? Product Cards main Div Started Started -->
+    <div id="cards_main_div" class="flex w-full items-center justify-evenly px-2 py-5">
+      <!--? Card 1 Started -->
+      <div id="card_main-div" class="">
+        <div id="image-div">
+          <img src="/images/pant1.png" alt="" />
+        </div>
+        <div id="text-div" class="flex w-full flex-col items-center justify-center">
+          <p class="font-[Poppins] text-2xl font-semibold">Man Jeans Pant</p>
+          <p class="font-[Poppins] text-xl">Variant</p>
+          <p class="font-[Poppins] text-2xl font-semibold">PKR. 5,000</p>
+          <a href=""
+            class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4">Add
+            to cart</a>
+        </div>
+      </div>
+      <!--` Card 1 Started -->
+      <!--? Card 1 Started -->
+      <div id="card_main-div" class="">
+        <div id="image-div">
+          <img src="/images/pant1.png" alt="" />
+        </div>
+        <div id="text-div" class="flex w-full flex-col items-center justify-center">
+          <p class="font-[Poppins] text-2xl font-semibold">Man Jeans Pant</p>
+          <p class="font-[Poppins] text-xl">Variant</p>
+          <p class="font-[Poppins] text-2xl font-semibold">PKR. 5,000</p>
+          <a href=""
+            class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4">Add
+            to cart</a>
+        </div>
+      </div>
+      <!--` Card 1 Started -->
+    </div>
+    <!--` Product Cards Ended -->
+  </section>
+  <!--` Section 2 Ended -->
+  <!--? Section 3 Started -->
+  <section id="section-3">
+    <h1 class="px-2 pb-7 pt-10 text-center font-[overlock] text-6xl font-semibold text-color_3">
+      Our Collections
+    </h1>
+    <!--? Cards Main Div Started -->
+    <div id="card-main-div" class="flex gap-12 w-full flex-col items-center justify-center px-2 py-5">
+      <!--? Card 1 Div Started -->
+      <div id="card-1"
+        class="bg-gradient-1 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Women Dresses</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Make your new styles with <br>
+            our Products !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/women.png" alt="women">
+        </div>
+      </div>
+      <!--` Card 1 Div Ended -->
+      <!--? Card 2 Div Started -->
+      <div id="card-2"
+        class="bg-gradient-2 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3 h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Men Dresses</h2>
+          <p class="text-3xl font-[Poppins] text-color_2">
+            Make new Fusion !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/man.png" alt="man">
+        </div>
+      </div>
+      <!--` Card 2 Div Ended -->
+      <!--? Card 3 Div Started -->
+      <div id="card-3"
+        class="bg-gradient-3 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Bags &
+            Accessories</h2>
+          <p class="text-2xl font-[Poppins] text-color_3">
+            Carry Your Style, Accessorize
+            Your Journey !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/bag.png" alt="bag">
+        </div>
+      </div>
+      <!--` Card 3 Div Ended -->
+      <!--? Card 4 Div Started -->
+      <div id="card-4"
+        class="bg-gradient-4 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Watches</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Timeless Elegance, <br>
+            Crafted for Every Moment !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/watch.png" alt="watch">
+        </div>
+      </div>
+      <!--` Card 4 Div Ended -->
+      <!--? Card 5 Div Started -->
+      <div id="card-5"
+        class="bg-gradient-5 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Fragrances</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Scent Your Story,<br>
+            Embrace Your Essence !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/perfume.png" alt="perfume">
+        </div>
+      </div>
+      <!--` Card 5 Div Ended -->
+      <!--? Card 6 Div Started -->
+      <div id="card-6"
+        class="bg-gradient-6 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Jewelry</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Timeless Elegance,<br>
+            Crafted for Every Moment !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/jewelry.png" alt="jewelry">
+        </div>
+      </div>
+      <!--` Card 6 Div Ended -->
+    </div>
+    <!--` Cards Main Div Ended -->
+  </section>
+  <!--` Section 3 Ended -->
+</body>
+
 </html>
