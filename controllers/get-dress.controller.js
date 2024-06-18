@@ -21,12 +21,19 @@ const getAll = async (req, res) => {
         });
     }
 };
-// const getOne = async (req, res) => {
-//   try {
-//     dbgr(req.params.id);
-//   } catch (error) {
-//     dbgr(error);
-//   }
-// };
+const getOne = async (req, res) => {
+    try {
+        dbgr("User getting dress...");
+        const dress = await Model.findById(req.params.id);
+        res.status(200).json({
+            success: true,
+            error: false,
+            message: "You have gotten dress successfully!",
+            data: dress,
+        });
+    } catch (error) {
+        dbgr(error);
+    }
+};
 
-export default { getAll };
+export default { getAll, getOne };
