@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-
-
   <!--? Font Awesome Icons Started -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -32,42 +30,56 @@
 
 <body>
   <!--? Hamburger Started -->
-
-  <section id="sidebar" style="transition: 0.6s;"
-    class="fixed top-0 left-[-100%] w-full h-dvh overflow-scroll bg-color_1  items-start justify-center">
+  <section id="sidebar" style="transition: 0.6s;" class="fixed top-0 left-[-100%] w-full h-screen bg-color_1">
+    <!--? Close Button Started -->
     <i id="close-btn"
-      class="fa-solid fa-xmark absolute z-20 text-color_7 top-0 right-0 text-5xl p-3 hover:bg-red hover:text-color_6"></i>
-    <ul class="absolute top-0 left-0 z-10 w-full h-dvh flex items-start justify-center flex-col gap-10 overflow-scroll">
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-house text-3xl"></i><a href="" class="text-3xl w-full flex ">Home</a>
+      class="fa-solid fa-xmark absolute top-0 right-0 p-5 text-color_5 text-5xl hover:bg-red hover:text-color_6"></i>
+    <!--` Close Button Ended -->
+    <ul class="w-full h-screen pt-10 pb-10 overflow-y-scroll flex flex-col items-center justify-start gap-10">
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-house text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">Home</a>
       </li>
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-shop text-3xl"></i><a href="" class="text-3xl w-full flex ">Shop</a>
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-shop text-3xl"></i><a href="" class="text-3xl w-full flex ">Shop</a>
+      <li id="shop-btn"
+        class="w-full relative font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2">
+        <i class="fa-solid fa-shop text-5xl text-color_2"></i><span href="" class="text-5xl text-color_2">Shop</span>
+        <i class="fa-solid fa-chevron-down absolute right-0 text-5xl pr-5 text-color_2"></i>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Women Dresses</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Men Dresses</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Bags & Accessories</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Watches</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Fragrances</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Jewelry</a>
+
       </li>
       </li>
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-user-large text-3xl"></i><a href="" class="text-3xl w-full flex ">About
-          Us</a>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-user text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">Contact Us</a>
       </li>
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-envelope text-3xl"></i><a href="" class="text-3xl w-full flex ">Contact
-          Us</a>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-envelope text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">About Us</a>
       </li>
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-cart-shopping text-3xl"></i><a href="" class="text-3xl w-full flex ">Shopping
-          Cart</a>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-right-to-bracket text-5xl text-color_2"></i><a href=""
+          class="text-5xl text-color_2">Login</a>
       </li>
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-user-plus text-3xl"></i><a href="" class="text-3xl w-full flex ">
-          Sign Up
-        </a>
-      </li>
-      <li class="border-b-2 border-grey w-full pb-5 pl-20 flex items-center justify-center  gap-10"><i
-          class="fa-solid fa-right-to-bracket text-3xl"></i><a href="" class="text-3xl w-full flex ">
-          Sign In
-        </a>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-user-plus text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">Sign Up</a>
       </li>
     </ul>
   </section>
@@ -334,7 +346,7 @@
     </h2>
     <form autocomplete="off" class="m-auto flex items-center justify-center gap-5 flex-col">
       <input placeholder="Email" type="email" class="px-5 w-[50%] rounded-3xl text-2xl py-2 outline-none">
-      <button href="#" class="rounded-3xl bg-color_3 px-10 py-3 font-[Poppins] text-xl text-color_6">
+      <button class="rounded-3xl bg-color_3 px-10 py-3 font-[Poppins] text-xl text-color_6">
         Subscribe!
       </button>
     </form>
