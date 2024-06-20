@@ -97,25 +97,106 @@
       </h2>
       <!--? Card main div Started -->
 
-      <div
-        id="main_cards-div "
-        class="flex w-full flex-col items-center justify-center gap-10 py-24"
-      >
-        <!--? Card 1 Started -->
-        <div
-          class="card flex w-[40%] flex-col items-center justify-center gap-2"
-        >
-          <div class="img flex w-full items-center justify-center">
-            <img src="/images/shopping.png" alt="" />
-          </div>
-          <div class="text flex flex-col items-center justify-center gap-2">
-            <h2 class="text-center font-[Poppins] text-3xl font-semibold">
-              Seamless Shopping Experience
-            </h2>
-            <p class="text-center text-2xl">
-              Browse through our wide range of products effortlessly.
-            </p>
-          </div>
+<body>
+  <!--? Hamburger Started -->
+  <section id="sidebar" style="transition: 0.6s;" class="fixed top-0 left-[-100%] w-full h-screen bg-color_1">
+    <!--? Close Button Started -->
+    <i id="close-btn"
+      class="fa-solid fa-xmark absolute top-0 right-0 p-5 text-color_5 text-5xl hover:bg-red hover:text-color_6"></i>
+    <!--` Close Button Ended -->
+    <ul class="w-full h-screen pt-10 pb-10 overflow-y-scroll flex flex-col items-center justify-start gap-10">
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-house text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">Home</a>
+      </li>
+      <li id="shop-btn"
+        class="w-full relative font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2">
+        <i class="fa-solid fa-shop text-5xl text-color_2"></i><span href="" class="text-5xl text-color_2">Shop</span>
+        <i class="fa-solid fa-chevron-down absolute right-0 text-5xl pr-5 text-color_2"></i>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Women Dresses</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Men Dresses</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Bags & Accessories</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Watches</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Fragrances</a>
+
+      </li>
+      <li class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+        <a href="" class="text-5xl text-color_2">Jewelry</a>
+
+      </li>
+      </li>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-user text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">Contact Us</a>
+      </li>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-envelope text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">About Us</a>
+      </li>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-right-to-bracket text-5xl text-color_2"></i><a href=""
+          class="text-5xl text-color_2">Login</a>
+      </li>
+      <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+          class="fa-solid fa-user-plus text-5xl text-color_2"></i><a href="" class="text-5xl text-color_2">Sign Up</a>
+      </li>
+    </ul>
+  </section>
+  <!--` Hamburger Ended -->
+  <!--? Nav Started -->
+  <nav class="flex w-full items-center justify-center px-2 py-2">
+    <div class="ml-2 mr-2 flex w-1/3 items-center justify-start">
+      <i id="hamburger" class="fa-solid fa-bars-staggered text-5xl text-color_3"></i>
+    </div>
+    <div class="m-2 flex w-1/3 items-center justify-center">
+      <img src="/images/logo.png" alt="Logo" class="w-20" />
+    </div>
+    <div class="ml-2 mr-2 flex w-1/3 items-center justify-end">
+      <i class="fa-solid fa-cart-shopping text-5xl text-color_3"></i>
+    </div>
+  </nav>
+  <!--` Nav Ended -->
+  <!--? Hero Section Started -->
+  <Section id="hero" class="flex w-full flex-col items-center justify-center gap-4 bg-color_4 px-2 py-5">
+    <h1 class="text-center font-[overlock] text-8xl font-semibold text-color_6">
+      Discover the Best <br />
+      Deals Online
+    </h1>
+    <h2 class="text-center font-[Poppins] text-2xl text-color_6">
+      Shop now and enjoy exclusive discounts <br />
+      on a wide range of products
+    </h2>
+    <a href="#" class="rounded-3xl bg-color_3 px-14 py-3 font-[Poppins] text-2xl text-color_6">Shop Now!</a>
+  </Section>
+  <!--` Hero Section Ended -->
+  <!--? Section 1 Started -->
+  <section id="section-1">
+    <h1 class="px-2 pb-5 pt-10 text-center font-[overlock] text-6xl font-semibold text-color_3">
+      Discover the Power of <br />
+      Our Product
+    </h1>
+    <h2 class="px-20 text-center font-[Poppins] text-2xl text-color_3">
+      Our products are designed to revolutionize the way you shop online. With
+      cutting-edge technology and user-friendly interfaces, we provide an
+      unparalleled shopping experience.
+    </h2>
+    <!--? Card main div Started -->
+
+    <div id="main_cards-div " class="flex w-full flex-col items-center justify-center gap-24 py-24">
+      <!--? Card 1 Started -->
+      <div class="card flex w-[40%] flex-col items-center justify-center gap-2">
+        <div class="img flex w-full items-center justify-center">
+          <img src="/images/shopping.png" alt="" />
         </div>
         <!--` Card 1 Ended -->
         <!--? Card 2 Started -->
@@ -400,8 +481,220 @@
         </div>
         <!--` Card 6 Div Ended -->
       </div>
+<<<<<<< HEAD
       <!--` Cards Main Div Ended -->
     </section>
     <!--` Section 3 Ended -->
   </body>
 </html>
+=======
+      <!--` Card 3 Ended -->
+    </div>
+    <!--` Card main div Ended -->
+  </section>
+  <!--` Section 1 Started -->
+  <!--? Section 2 Started -->
+  <section id="section-2">
+    <!--? Filters div Started -->
+    <!-- <div class="flex w-full items-center justify-center gap-10 px-2 py-5">
+      <div class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_4">
+        MOST POPULAR
+      </div>
+      <div class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_2">
+        BEST SELLAR
+      </div>
+      <div class="flex items-center justify-center px-2 py-2 font-[overlock] text-4xl font-bold text-color_2">
+        NEW ARRIVAL
+      </div>
+    </div> -->
+    <!--` Filters div Ended -->
+    <h1 class="px-2 pb-20 pt-10 text-center font-[overlock] text-6xl font-semibold text-color_3">
+      Most Popular
+    </h1>
+    <!--? Product Cards main Div Started Started -->
+    <div id="cards_main_div" class="flex w-full items-center justify-evenly px-2 py-5">
+      <!--? Card 1 Started -->
+      <div id="card_main-div" class="">
+        <div id="image-div">
+          <img src="/images/pant1.png" alt="" />
+        </div>
+        <div id="text-div" class="flex w-full flex-col items-center justify-center">
+          <p class="font-[Poppins] text-2xl font-semibold">Man Jeans Pant</p>
+          <p class="font-[Poppins] text-xl">Variant</p>
+          <p class="font-[Poppins] text-2xl font-semibold">PKR. 5,000</p>
+          <a href=""
+            class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4">Add
+            to cart</a>
+        </div>
+      </div>
+      <!--` Card 1 Started -->
+      <!--? Card 1 Started -->
+      <div id="card_main-div" class="">
+        <div id="image-div">
+          <img src="/images/pant1.png" alt="" />
+        </div>
+        <div id="text-div" class="flex w-full flex-col items-center justify-center">
+          <p class="font-[Poppins] text-2xl font-semibold">Man Jeans Pant</p>
+          <p class="font-[Poppins] text-xl">Variant</p>
+          <p class="font-[Poppins] text-2xl font-semibold">PKR. 5,000</p>
+          <a href=""
+            class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4">Add
+            to cart</a>
+        </div>
+      </div>
+      <!--` Card 1 Started -->
+    </div>
+    <!--` Product Cards Ended -->
+  </section>
+  <!--` Section 2 Ended -->
+  <!--? Section 3 Started -->
+  <section id="section-3">
+    <h1 class="px-2 pb-20 pt-10 text-center font-[overlock] text-6xl font-semibold text-color_3">
+      Our Collections
+    </h1>
+    <!--? Cards Main Div Started -->
+    <div id="card-main-div" class="flex gap-12 w-full flex-col items-center justify-center px-2 py-5">
+      <!--? Card 1 Div Started -->
+      <div id="card-1"
+        class="bg-gradient-1 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Women Dresses</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Make your new styles with <br>
+            our Products !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/women.png" alt="women">
+        </div>
+      </div>
+      <!--` Card 1 Div Ended -->
+      <!--? Card 2 Div Started -->
+      <div id="card-2"
+        class="bg-gradient-2 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3 h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Men Dresses</h2>
+          <p class="text-3xl font-[Poppins] text-color_2">
+            Make new Fusion !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/man.png" alt="man">
+        </div>
+      </div>
+      <!--` Card 2 Div Ended -->
+      <!--? Card 3 Div Started -->
+      <div id="card-3"
+        class="bg-gradient-3 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Bags &
+            Accessories</h2>
+          <p class="text-2xl font-[Poppins] text-color_3">
+            Carry Your Style, Accessorize
+            Your Journey !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/bag.png" alt="bag">
+        </div>
+      </div>
+      <!--` Card 3 Div Ended -->
+      <!--? Card 4 Div Started -->
+      <div id="card-4"
+        class="bg-gradient-4 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Watches</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Timeless Elegance, <br>
+            Crafted for Every Moment !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/watch.png" alt="watch">
+        </div>
+      </div>
+      <!--` Card 4 Div Ended -->
+      <!--? Card 5 Div Started -->
+      <div id="card-5"
+        class="bg-gradient-5 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Fragrances</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Scent Your Story,<br>
+            Embrace Your Essence !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full ">
+          <img src="/images/perfume.png" alt="perfume">
+        </div>
+      </div>
+      <!--` Card 5 Div Ended -->
+      <!--? Card 6 Div Started -->
+      <div id="card-6"
+        class="bg-gradient-6 w-[40rem] overflow-hidden flex items-center justify-between rounded-tr-[100px] rounded-bl-[100px] py-5 px-5">
+        <div id="text-div" class="w-2/3  h-full flex items-start justify-center flex-col px-2 gap-4">
+          <h2 class="text-5xl font-semibold font-[overlock] text-color_2">Jewelry</h2>
+          <p class="text-2xl font-[Poppins] text-color_2">
+            Timeless Elegance,<br>
+            Crafted for Every Moment !
+          </p>
+          <a href="#" class="rounded-3xl bg-color_2 px-10 py-3 font-[Poppins] text-xl text-color_6">Shop Now!</a>
+        </div>
+        <div id="image-div" class="w-1/3 h-full">
+          <img src="/images/jewelry.png" alt="jewelry">
+        </div>
+      </div>
+      <!--` Card 6 Div Ended -->
+    </div>
+    <!--` Cards Main Div Ended -->
+  </section>
+  <!--` Section 3 Ended -->
+  <!-- ? Section 4 Started -->
+  <section id="Subscribe-section-4" class="bg-color_4 w-full px-2 py-5">
+    <h1
+      class="px-2 pb-7 pt-10 text-center font-[overlock] text-6xl font-semibold text-color_3 border-b-4 border-color_3 w-[50%] m-auto">
+      Subscribe
+    </h1>
+    <h2 class="px-20 text-center font-[Poppins] text-2xl text-color_3 my-5">
+      Subscribe our newsletters to stay updated every moment
+    </h2>
+    <form autocomplete="off" class="m-auto flex items-center justify-center gap-5 flex-col">
+      <input placeholder="Email" type="email" class="px-5 w-[50%] rounded-3xl text-2xl py-2 outline-none">
+      <button class="rounded-3xl bg-color_3 px-10 py-3 font-[Poppins] text-xl text-color_6">
+        Subscribe!
+      </button>
+    </form>
+  </section>
+  <!--` Section 4 Ended -->
+  <!--? Footer Section Started -->
+  <footer class="w-full bg-color_1 px-2 py-5">
+    <img src="/images/logo.png" alt="" class="m-auto w-36">
+    <h2 class="py-5 text-center font-[Poppins] text-2xl text-color_3">
+      Empowering Your Style With Our <br>
+      Quality Products
+    </h2>
+    <div id="social-media-icons"
+      class="w-[80%] flex items-center justify-center gap-10 py-5 m-auto border-b-4 border-color_4">
+      <i class="fa-brands fa-twitter text-color_4 text-5xl"></i>
+      <i class="fa-brands fa-facebook-f text-color_4 text-5xl"></i>
+      <i class="fa-brands fa-instagram text-color_4 text-5xl"></i>
+      <i class="fa-brands fa-youtube text-color_4 text-5xl"></i>
+
+
+    </div>
+    <p class="text-center text-2xl text-color_4">© 2024 Zubiz Shop. All rights reserved</p>
+    <p class="text-center text-2xl text-color_4">Cookie Settings Privacy Policy</p>
+    <p class="text-center text-2xl text-color_4">Terms and Conditions</p>
+  </footer>
+  <!-- ` Footer Section Ended -->
+
+</body>
+<script src=" /javascripts/index.js"></script>
+
+</html>
+>>>>>>> frontend

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./views/**/*.ejs"],
+
   theme: {
     colors: {
       transparent: "transparent",
@@ -10,6 +11,9 @@ export default {
       color_4: "#22A39F",
       color_5: "#000000",
       color_6: "#FFFFFF",
+      color_7: "#000000",
+      red: "#FF0000",
+      grey: "#b3b1b0",
     },
     extend: {
       backgroundImage: {
