@@ -3,27 +3,9 @@ import debug from "debug";
 
 const dbgr = debug("development:get:dress:controller"); // Create an instance of debugger to debug messages
 
-const getAll = async (req, res) => {
+const get = async (req, res) => {
   try {
     dbgr("User getting dresses...");
-    const dresses = await Model.find(); // Find all dresses in the database
-    res.status(200).json({
-      success: true,
-      error: false,
-      message: "You have gotten dresses successfully!",
-      data: dresses,
-    }); // Send the dresses to the client
-  } catch (error) {
-    res.status(500).json({
-      success: true,
-      error: false,
-      message: "Internal Server Error!",
-    });
-  }
-};
-const getFiltered = async (req, res) => {
-  try {
-    dbgr("User getting dress...");
 
     const { limit, size, color, pricegt, pricelt, ...otherQueries } = req.query; // Destructure limit, size, and other query parameters
 
@@ -41,6 +23,10 @@ const getFiltered = async (req, res) => {
 
     if (pricegt && pricelt) {
       queryObject["sizes.colors.price"] = { $gt: +pricegt, $lt: +pricelt };
+    } else if (pricegt) {
+      queryObject["sizes.colors.price"] = { $gt: +pricegt };
+    } else if (pricelt) {
+      queryObject["sizes.colors.price"] = { $lt: +pricelt };
     }
     const dress = await Model.find(queryObject).limit(limitNumber); // Find dresses based on query and limit
 
@@ -61,4 +47,4 @@ const getFiltered = async (req, res) => {
   }
 };
 
-export default { getAll, getFiltered };
+export default { get };

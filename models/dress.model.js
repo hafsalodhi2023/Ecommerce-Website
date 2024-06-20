@@ -64,7 +64,7 @@ const DressSchema = new Schema(
     stuffType: { type: String, required: true },
     clothCategory: {
       type: String,
-      enum: ["01 Piece", "02 Piece", "03 Piece", "04 Piece", "Top", "Bottom"],
+      enum: ["02 Piece", "03 Piece", "04 Piece", "Top", "Bottom", "Dubatta"],
       required: true,
     },
     MadeType: {

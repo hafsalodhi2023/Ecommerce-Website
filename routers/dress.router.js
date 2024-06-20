@@ -4,7 +4,6 @@ import express from "express";
 const router = express.Router();
 
 router
-  .get("/getall", dressController.getAll)
-  .get("/get", dressController.getFiltered);
+  .get("/get", dressController.get);
 
 export default router;
