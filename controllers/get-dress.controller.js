@@ -1,7 +1,7 @@
 import Model from "../models/dress.model.js"; // Import the dress model
 import debug from "debug";
 
-const dbgr = debug("development:get:dress:controller"); // Create an instance of debugger to debug messages
+const dbgr = debug("development:controller:dress:get"); // Create an instance of debugger to debug messages
 
 const get = async (req, res) => {
   try {
@@ -41,7 +41,7 @@ const get = async (req, res) => {
     res.status(500).json({
       success: false,
       error: true,
-      message: "An error occurred while getting the dress.",
+      message: "Internal Server Error!",
       data: null,
     });
   }
