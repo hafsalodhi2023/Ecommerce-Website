@@ -6,7 +6,7 @@ import bcryptor from "../utils/password-bcryptor.utils.js";
 import jwtGenerator from "../utils/jwt-generator.utils.js";
 
 // All Variables
-const dbgr = debug("development:controllers:client"); // Create a debug instance for logging
+const dbgr = debug("development:controllers:client:register"); // Create a debug instance for logging
 
 // Register a new client
 const register = async (req, res) => {
@@ -116,7 +116,7 @@ const register = async (req, res) => {
     return res.status(500).json({
       success: false,
       error: true,
-      message: error.message,
+      message: "Internal Server Error!",
       data: null,
     });
   }
