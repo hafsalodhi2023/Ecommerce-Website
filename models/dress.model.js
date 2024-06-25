@@ -61,13 +61,18 @@ const DressSchema = new Schema(
       },
     },
     sizes: [SizeSchema],
+    delieveryCharges: {
+      type: Number,
+      required: true, // Delievery charges is required
+      default: 200,
+    },
     stuffType: { type: String, required: true },
     clothCategory: {
       type: String,
       enum: ["02 Piece", "03 Piece", "04 Piece", "Top", "Bottom", "Dubatta"],
       required: true,
     },
-    MadeType: {
+    madeType: {
       type: String,
       enum: ["Stiched", "Un-Stiched"],
       required: true,
