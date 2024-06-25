@@ -3,6 +3,99 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
+const StockSchema = new Schema({
+  total: { type: Number, required: true },
+  status: {
+    type: String,
+    enum: ["In Stock", "Out of Stock"],
+    required: true,
+  },
+});
+
+const cartSchema = new Schema({
+  name: {
+    type: String,
+    required: true, // Name is required
+  },
+  description: {
+    type: String,
+    required: true, // Description is required
+  },
+  gender: {
+    type: String,
+    enum: ["Male", "Female", "Unisex"],
+    required: true, // Gender is required
+  },
+  SKU: {
+    type: String,
+    required: true,
+    minlength: [6, "SKU should be at least 6 characters long."],
+    maxlength: [10, "SKU should be at most 10 characters long."],
+    validate: {
+      validator: function (v) {
+        return /^SKU-.{2,6}$/.test(v);
+      },
+      message: (props) =>
+        `${props.value} is not a valid SKU! It should be in the format 'SKU-xxx'.`,
+    },
+  },
+  price: {
+    type: Number,
+    required: true, // Price is required
+  },
+  quantity: {
+    type: Number,
+    required: true, // Quantity is required
+  },
+  size: {
+    type: String,
+    enum: ["Small", "Medium", "Large", "XL", "XXL"],
+    required: true,
+  },
+  color: {
+    type: String,
+    required: true,
+  },
+  stuffType: {
+    type: String,
+    required: true,
+  },
+  clothCategory: {
+    type: String,
+    enum: ["02 Piece", "03 Piece", "04 Piece", "Top", "Bottom", "Dubatta"],
+    required: true,
+  },
+  madeType: {
+    type: String,
+    enum: ["Stiched", "Un-Stiched"],
+    required: true,
+  },
+  discount: {
+    type: Number,
+    min: [0, "Discount should be at least 0%."],
+    max: [100, "Discount should be at most 100%."],
+    default: 0,
+  },
+  sale: {
+    type: Boolean,
+    default: false,
+  },
+  photos: {
+    type: [String],
+    required: true,
+    validate: {
+      validator: function (v) {
+        return v.length <= 5;
+      },
+      message: (props) => `${props.value} exceeds the limit of 5`, // Here {PATH} is used as props.path
+    },
+  },
+  stock: {
+    type: StockSchema,
+    required: true,
+  },
+});
+
 // Define the schema for the Client model
 const clientSchema = new Schema(
   {
@@ -57,7 +150,7 @@ const clientSchema = new Schema(
       required: true, // Auth token is required
     },
     cart: {
-      type: Array,
+      type: [cartSchema],
       default: [],
     },
     createdAt: {
