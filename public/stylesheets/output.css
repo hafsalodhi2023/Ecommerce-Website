@@ -859,7 +859,7 @@ video {
 }
 
 .bg-\[url\(\'\/images\/section5-image\.png\'\)\] {
-  background-image: url('/images/section5-image.png');
+  background-image: url("/images/section5-image.png");
 }
 
 .bg-gradient-1 {
@@ -904,7 +904,7 @@ video {
 
 .object-contain {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .object-cover {
