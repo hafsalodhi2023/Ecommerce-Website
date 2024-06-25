@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: "";
+  --tw-content: '';
 }
 
 /*
@@ -44,10 +44,9 @@ html,
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -90,7 +89,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -136,8 +135,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -238,9 +236,9 @@ select {
 */
 
 button,
-input:where([type="button"]),
-input:where([type="reset"]),
-input:where([type="submit"]) {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -287,7 +285,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -380,8 +378,7 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -449,9 +446,7 @@ video {
   display: none;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -777,10 +772,6 @@ video {
   overflow-y: scroll;
 }
 
-.text-clip {
-  text-overflow: clip;
-}
-
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -801,16 +792,17 @@ video {
   border-width: 1px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
 .border-b-2 {
   border-bottom-width: 2px;
 }
 
 .border-b-4 {
   border-bottom-width: 4px;
+}
+
+.border-color_2 {
+  --tw-border-opacity: 1;
+  border-color: rgb(67 66 66 / var(--tw-border-opacity));
 }
 
 .border-color_3 {
@@ -859,31 +851,31 @@ video {
 }
 
 .bg-\[url\(\'\/images\/section5-image\.png\'\)\] {
-  background-image: url("/images/section5-image.png");
+  background-image: url('/images/section5-image.png');
 }
 
 .bg-gradient-1 {
-  background-image: linear-gradient(170deg, #fff 7.26%, #48b4b6 89.5%);
+  background-image: linear-gradient(170deg, #FFF 7.26%, #48B4B6 89.5%);;
 }
 
 .bg-gradient-2 {
-  background-image: linear-gradient(170deg, #fff 7.26%, #808080 89.5%);
+  background-image: linear-gradient(170deg, #FFF 7.26%, #808080 89.5%);;
 }
 
 .bg-gradient-3 {
-  background-image: linear-gradient(170deg, #fff 7.26%, #f1b0b0 89.5%);
+  background-image: linear-gradient(170deg, #FFF 7.26%, #F1B0B0 89.5%);;
 }
 
 .bg-gradient-4 {
-  background-image: linear-gradient(170deg, #fff 7.26%, #169c6a 89.5%);
+  background-image: linear-gradient(170deg, #FFF 7.26%, #169C6A 89.5%);;
 }
 
 .bg-gradient-5 {
-  background-image: linear-gradient(170deg, #fff 7.26%, #f24616 89.5%);
+  background-image: linear-gradient(170deg, #FFF 7.26%, #F24616 89.5%);;
 }
 
 .bg-gradient-6 {
-  background-image: linear-gradient(170deg, #fff 7.26%, #f5bb8d 89.5%);
+  background-image: linear-gradient(170deg, #FFF 7.26%, #F5BB8D 89.5%);;
 }
 
 .bg-cover {
@@ -904,12 +896,12 @@ video {
 
 .object-contain {
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .object-cover {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .p-0 {
@@ -970,16 +962,6 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.px-0\.5 {
-  padding-left: 0.125rem;
-  padding-right: 0.125rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1024,18 +1006,6 @@ video {
   font-family: overlock;
 }
 
-.font-\[\] {
-  font-family:;
-}
-
-.font-\[overlockss\] {
-  font-family: overlockss;
-}
-
-.font-\[overloc\] {
-  font-family: overloc;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1076,14 +1046,9 @@ video {
   line-height: 1.25rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1134,34 +1099,9 @@ video {
 }
 
 .transition {
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    backdrop-filter,
-    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1208,7 +1148,7 @@ video {
 }
 
 .before\:content-\[\'\'\]::before {
-  --tw-content: "";
+  --tw-content: '';
   content: var(--tw-content);
 }
 
@@ -1254,7 +1194,7 @@ video {
 }
 
 .after\:content-\[\'\'\]::after {
-  --tw-content: "";
+  --tw-content: '';
   content: var(--tw-content);
 }
 
@@ -1339,7 +1279,7 @@ video {
 
   .lg\:object-cover {
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
 
   .lg\:px-14 {
