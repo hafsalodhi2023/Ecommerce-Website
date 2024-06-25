@@ -700,6 +700,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-start {
   align-items: flex-start;
 }
@@ -768,6 +772,10 @@ video {
   overflow-y: scroll;
 }
 
+.text-clip {
+  text-overflow: clip;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -786,6 +794,10 @@ video {
 
 .border-\[1px\] {
   border-width: 1px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-b-2 {
@@ -953,6 +965,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-0\.5 {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -995,6 +1017,18 @@ video {
 
 .font-\[overlock\] {
   font-family: overlock;
+}
+
+.font-\[\] {
+  font-family: ;
+}
+
+.font-\[overlockss\] {
+  font-family: overlockss;
+}
+
+.font-\[overloc\] {
+  font-family: overloc;
 }
 
 .text-2xl {
@@ -1040,6 +1074,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .font-bold {
