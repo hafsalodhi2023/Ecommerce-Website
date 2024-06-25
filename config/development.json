@@ -1,3 +1,3 @@
 {
-  "MONGODB_URI": "mongodb://localhost:27017"
+  "MONGODB_URI": "mongodb+srv://hafsalodhi2023:ocQwS2VvvGH8fwi9@cluster0.u9o53b3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 }
