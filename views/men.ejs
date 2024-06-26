@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    <style>
+        .shop:hover .nested-ul {
+            display: flex;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!--? Font Awesome Icons Started -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -33,51 +38,83 @@
     <!--? Navbar for Desktop -->
     <nav class="md:hidden lg:flex w-full z-50 px-8 py-2 flex items-center justify-center ">
         <div class="left w-[20%]  ">
-            <a href="">
+            <a href="/">
                 <img src="/images/black-logo.png" alt="" class="w-[60px]">
             </a>
         </div>
         <div class="right w-[80%] flex items-center justify-center ">
             <div class="link-div w-[60%] flex items-center justify-center ">
-                <ul class="w-full flex items-center justify-evenly">
-                    <li><a href="" class="text-xl">Home</a></li>
-                    <li class="text-xl">Shop <i class="fa-solid fa-angle-down"></i></li>
-                    <li><a href="" class="text-xl">Contact Us </a></li>
-                    <li><a href="" class="text-xl">About Us</a></li>
+                <ul class="w-full flex items-center justify-evenly relative">
+                    <li><a href="/" class="text-xl">Home</a></li>
+                    <li class="shop text-xl cursor-pointer">Shop <i class="fa-solid fa-angle-down"></i>
+                        <ul
+                            class="z-50 nested-ul shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)] absolute min-w-[160px] bg-color_1 hidden items-start justify-center flex-col ">
+                            <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
+                                    href="/women" class="p-[12px_16px] no-underline block text-left">Women
+                                    Dresses
+                            <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
+                                    href="/men" class=" p-[12px_16px] no-underline block text-left">Men Dresses
+                                </a></li>
+                            <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
+                                    href="/accessories" class=" p-[12px_16px] no-underline block text-left">Bags &
+                                    Accessories
+
+                                </a></li>
+                            <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
+                                    href="/watches" class=" p-[12px_16px] no-underline block text-left">Watches
+
+                                </a></li>
+                            <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
+                                    href="/fragrances" class=" p-[12px_16px] no-underline block text-left">Fragrances
+
+                                </a></li>
+                            <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
+                                    href="/jewelry" class=" p-[12px_16px] no-underline block text-left">Jewelry
+
+                                </a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li><a href="/contact" class="text-xl">Contact Us </a></li>
+                    <li><a href="/about" class="text-xl">About Us</a></li>
                 </ul>
             </div>
             <div class="button-div w-[40%] flex items-center justify-end gap-6">
 
+                <a href="#" class="rounded-3xl bg-color_3 px-14 py-2 font-[Poppins] text-sm  text-color_6">Sign Up</a>
                 <a href="#"
-                    class="rounded-3xl font-semibold bg-color_3 px-14 py-2 font-[Poppins] text-sm  text-color_6">Sign
-                    Up</a>
-                <a href="#"
-                    class="rounded-3xl border-[1px] font-semibold border-color_2 px-14 py-2 font-[Poppins] text-sm text-color_2">Sign
+                    class="rounded-3xl border-[1px] border-color_6 px-14 py-2 font-[Poppins] text-sm text-color_6">Sign
                     In</a>
+
             </div>
         </div>
     </nav>
     <!--` Navbar for Desktop -->
     <h1
-        class="relative flex items-center justify-center text-6xl text-center bg-color_4 text-color_6 py-5 font-bold font-[overlock]">
-        MEN DRESSES COLLECTION <i class="fa-solid fa-filter text-5xl text-color_5 absolute right-0 px-5"></i></h1>
-    <div class="w-full px-5 py-5 flex items-center justify-evenly flex-wrap">
-        <!--? Card 1 Started -->
-        <div id="card_main-div" class="w-auto lg:w-56">
-            <div id="image-div">
-                <img src="/images/pant1.png" alt="" />
+        class=" relative flex items-center justify-center text-6xl text-center bg-color_4 text-color_6 py-5 font-bold font-[overlock]">
+        MEN DRESSES COLLECTION <i class="fa-solid fa-filter text-5xl text-color_5 absolute right-0 px-5"></i>
+    </h1>
+    <div class="cardMainDiv w-full px-5 py-5 flex items-center justify-evenly flex-wrap">
+        <!-- <div class="card w-auto lg:w-56 mb-10 h-[540px] overflow-hidden flex items-center justify-between flex-col">
+            <div class="image-div w-full h-[65%] overflow-hidden flex items-start justify-center">
+                <img src=" /images/pant1.png" alt="" />
             </div>
-            <div id="text-div" class="flex w-full flex-col items-center justify-center">
-                <p class="font-[Poppins] text-xl font-semibold">Man Jeans Pant</p>
-                <p class="font-[Poppins] text-lg">Variant</p>
-                <p class="font-[Poppins] text-2xl font-semibold">PKR. 5,000</p>
-                <a href=""
+            <div id="text-div" class="flex w-full flex-col items-center justify-end h-[45%]">
+                <p class="font-[Poppins] text-xl font-semibold text-center">
+                    Lorem ipsum dolor
+                </p>
+                <p class="font-[Poppins] text-lg text-center px-2">
+                    Lorem ipsum dolor sit, amet consectetur
+                </p>
+                <p class="font-[Poppins] text-2xl font-semibold">PKR. 2550
+                </p>
+                <a href="#"
                     class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4">Add
                     to cart</a>
             </div>
-        </div>
-        <!--` Card 1 Started -->
+        </div> -->
     </div>
 </body>
+<script src="/javascripts/men.js"></script>
 
 </html>

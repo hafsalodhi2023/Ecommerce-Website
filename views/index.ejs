@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+  <style>
+    .shop:hover .nested-ul {
+      display: flex;
+    }
+  </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!--? Font Awesome Icons Started -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -33,17 +38,44 @@
   <!--? Navbar for Desktop -->
   <nav class="md:hidden lg:flex w-full absolute top-0 left-0 z-50 px-8 py-2 flex items-center justify-center ">
     <div class="left w-[20%]  ">
-      <a href="">
+      <a href="/">
         <img src="/images/black-logo.png" alt="" class="w-[60px]">
       </a>
     </div>
     <div class="right w-[80%] flex items-center justify-center ">
       <div class="link-div w-[60%] flex items-center justify-center ">
-        <ul class="w-full flex items-center justify-evenly">
-          <li><a href="" class="text-xl">Home</a></li>
-          <li class="text-xl">Shop <i class="fa-solid fa-angle-down"></i></li>
-          <li><a href="" class="text-xl">Contact Us </a></li>
-          <li><a href="" class="text-xl">About Us</a></li>
+        <ul class="w-full flex items-center justify-evenly relative">
+          <li><a href="/" class="text-xl">Home</a></li>
+          <li class="shop text-xl cursor-pointer">Shop <i class="fa-solid fa-angle-down"></i>
+            <ul
+              class="nested-ul shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)] absolute min-w-[160px] bg-color_1 hidden items-start justify-center flex-col ">
+              <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a href="/women"
+                  class="p-[12px_16px] no-underline block text-left">Women
+                  Dresses
+              <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a href="/men"
+                  class=" p-[12px_16px] no-underline block text-left">Men Dresses
+                </a></li>
+              <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
+                  href="/accessories" class=" p-[12px_16px] no-underline block text-left">Bags & Accessories
+
+                </a></li>
+              <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a href="/watches"
+                  class=" p-[12px_16px] no-underline block text-left">Watches
+
+                </a></li>
+              <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a href="/fragrances"
+                  class=" p-[12px_16px] no-underline block text-left">Fragrances
+
+                </a></li>
+              <li class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a href="/jewelry"
+                  class=" p-[12px_16px] no-underline block text-left">Jewelry
+
+                </a></li>
+            </ul>
+          </li>
+          </li>
+          <li><a href="/contact" class="text-xl">Contact Us </a></li>
+          <li><a href="/about" class="text-xl">About Us</a></li>
         </ul>
       </div>
       <div class="button-div w-[40%] flex items-center justify-end gap-6">
