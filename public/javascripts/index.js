@@ -18,7 +18,7 @@ shop_subs.forEach((shop_sub) => {
 
 hamburger.addEventListener("click", (e) => {
   sidebar.className =
-    "fixed flex flex-col pt-20 top-0 left-0 w-full h-dvh bg-color_1  items-center justify-center";
+    "fixed flex flex-col z-20 pt-20 top-0 left-0 w-full h-dvh bg-color_1  items-center justify-center";
 });
 
 close_btn.addEventListener("click", () => {

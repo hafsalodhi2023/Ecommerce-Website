@@ -48,7 +48,7 @@
                     <li><a href="/" class="text-xl">Home</a></li>
                     <li class="shop text-xl cursor-pointer">Shop <i class="fa-solid fa-angle-down"></i>
                         <ul
-                            class="nested-ul z-10 shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)] absolute min-w-[160px] bg-color_1 hidden items-start justify-center flex-col ">
+                            class="nested-ul z-20 shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)] absolute min-w-[160px] bg-color_1 hidden items-start justify-center flex-col ">
                             <li style="transition: 0.6s;"
                                 class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
                                     href="/women" class="p-[12px_16px] no-underline block text-left">Women
@@ -99,8 +99,89 @@
         </div>
     </nav>
     <!--` Navbar for Desktop -->
+    <!--? Sidebar for mobile Started -->
+    <section id="sidebar" style="transition: 0.6s;" class="fixed top-0 left-[-100%] w-full z-20 h-screen bg-color_1">
+        <!--? Close Button Started -->
+        <i id="close-btn"
+            class="fa-solid fa-xmark absolute top-0 right-0 p-5 text-color_5 text-5xl hover:bg-red hover:text-color_6"></i>
+        <!--` Close Button Ended -->
+        <ul class="w-full h-screen pt-10 pb-10 overflow-y-scroll flex flex-col items-center justify-start gap-10">
+            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+                    class="fa-solid fa-house text-5xl text-color_2"></i><a href="/"
+                    class="text-5xl text-color_2">Home</a>
+            </li>
+            <li id="shop-btn"
+                class="w-full relative font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2">
+                <i class="fa-solid fa-shop text-5xl text-color_2"></i><span class="text-5xl text-color_2">Shop</span>
+                <i class="fa-solid fa-chevron-down absolute right-0 text-5xl pr-5 text-color_2"></i>
+            <li
+                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+                <a href="/women" class="text-5xl text-color_2">Women Dresses</a>
+
+            </li>
+            <li
+                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+                <a href="/men" class="text-5xl text-color_2">Men Dresses</a>
+
+            </li>
+            <li
+                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+                <a href="/accessories" class="text-5xl text-color_2">Bags & Accessories</a>
+
+            </li>
+            <li
+                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+                <a href="/watches" class="text-5xl text-color_2">Watches</a>
+
+            </li>
+            <li
+                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+                <a href="/fragrances" class="text-5xl text-color_2">Fragrances</a>
+
+            </li>
+            <li
+                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
+                <a href="/jewelry" class="text-5xl text-color_2">Jewelry</a>
+
+            </li>
+            </li>
+            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+                    class="fa-solid fa-user text-5xl text-color_2"></i><a href="/contact"
+                    class="text-5xl text-color_2">Contact
+                    Us</a>
+            </li>
+            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+                    class="fa-solid fa-envelope text-5xl text-color_2"></i><a href="/about"
+                    class="text-5xl text-color_2">About
+                    Us</a>
+            </li>
+            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+                    class="fa-solid fa-right-to-bracket text-5xl text-color_2"></i><a href=""
+                    class="text-5xl text-color_2">Login</a>
+            </li>
+            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
+                    class="fa-solid fa-user-plus text-5xl text-color_2"></i><a href=""
+                    class="text-5xl text-color_2">Sign
+                    Up</a>
+            </li>
+        </ul>
+    </section>
+    <!--` Sidebar for mobile Ended -->
+    <!--? Nav for mobile Started -->
+    <nav class="flex w-full items-center justify-center px-2 py-2 lg:hidden">
+        <div class="ml-2 mr-2 flex w-1/3 items-center justify-start">
+            <i id="hamburger" class="fa-solid fa-bars-staggered text-5xl text-color_3"></i>
+        </div>
+        <div class="m-2 flex w-1/3 items-center justify-center">
+            <img src="/images/logo.png" alt="Logo" class="w-20" />
+        </div>
+        <div class="ml-2 mr-2 flex w-1/3 items-center justify-end">
+            <i class="fa-solid fa-cart-shopping text-5xl text-color_3"></i>
+        </div>
+    </nav>
+    <!--` Nav for mobile Ended -->
     <h1
-        class=" relative flex items-center justify-center text-6xl text-center bg-color_4 text-color_6 py-5 font-bold font-[overlock]">
+        class=" relative z-10 flex items-center justify-center text-6xl text-center bg-color_4 text-color_6 py-5 font-bold font-[overlock]">
         MEN DRESSES COLLECTION <i class="fa-solid fa-filter text-3xl text-color_6 absolute right-0 px-5"></i>
     </h1>
     <div class="cardMainDiv w-full px-5 py-5 flex items-center justify-evenly flex-wrap">
@@ -125,5 +206,6 @@
     </div>
 </body>
 <script src="/javascripts/men.js"></script>
+<script src="/javascripts/index.js"></script>
 
 </html>
