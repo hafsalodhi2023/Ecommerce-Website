@@ -36,6 +36,34 @@ app.get("/men", (req, res) => {
   res.render("men", { url: "http://localhost:8080" }); // Render the "index" view
 });
 
+app.get("/women", (req, res) => {
+  res.render("women", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
+app.get("/accessories", (req, res) => {
+  res.render("accessories", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
+app.get("/watches", (req, res) => {
+  res.render("watches", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
+app.get("/fragrances", (req, res) => {
+  res.render("fragrances", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
+app.get("/jewelry", (req, res) => {
+  res.render("jewelry", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
+app.get("/about", (req, res) => {
+  res.render("about", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
 // Start the server and listen on port 3000
 app.listen(8080, () => {
   dbgr("Server is running on port 8080"); // Log a message when the server starts
