@@ -32,13 +32,12 @@ const cardDiv = document.querySelector(".cardMainDiv");
                     ${item.name}
                 </p>
                 <p class="font-[Poppins] text-lg text-center px-2">
-                    ${item.stuffType}
+                    ${item.SKU}
                 </p>
                 <p class="font-[Poppins] text-2xl font-semibold">PKR. ${item.sizes[0].colors[0].price}
                 </p>
                 <a href="#"
-                    class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4">Add
-                    to cart</a>
+                    class="flex w-full items-center justify-center border-2 border-color_4 py-2 text-2xl font-semibold text-color_4">View Product</a>
             </div>
     `;
     cardDiv.appendChild(card);

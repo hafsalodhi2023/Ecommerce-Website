@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: '';
+  --tw-content: "";
 }
 
 /*
@@ -44,9 +44,10 @@ html,
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -89,7 +90,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -135,7 +136,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -236,9 +238,9 @@ select {
 */
 
 button,
-input:where([type='button']),
-input:where([type='reset']),
-input:where([type='submit']) {
+input:where([type="button"]),
+input:where([type="reset"]),
+input:where([type="submit"]) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -285,7 +287,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -378,7 +380,8 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -446,7 +449,9 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -623,6 +628,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.box-border {
+  box-sizing: border-box;
+}
+
 .block {
   display: block;
 }
@@ -687,6 +696,10 @@ video {
   width: 15%;
 }
 
+.w-\[20\%\] {
+  width: 20%;
+}
+
 .w-\[28rem\] {
   width: 28rem;
 }
@@ -705,6 +718,10 @@ video {
 
 .w-\[55\%\] {
   width: 55%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-\[60px\] {
@@ -808,6 +825,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -830,6 +851,10 @@ video {
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-\[2px\] {
@@ -868,6 +893,11 @@ video {
   border-color: rgb(128 128 128 / var(--tw-border-opacity));
 }
 
+.border-red {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
+}
+
 .bg-color_1 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 239 224 / var(--tw-bg-opacity));
@@ -888,37 +918,42 @@ video {
   background-color: rgb(34 163 159 / var(--tw-bg-opacity));
 }
 
+.bg-greyLight {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 128 128 / var(--tw-bg-opacity));
+}
+
 .bg-red {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/images\/section5-image\.png\'\)\] {
-  background-image: url('/images/section5-image.png');
+  background-image: url("/images/section5-image.png");
 }
 
 .bg-gradient-1 {
-  background-image: linear-gradient(170deg, #FFF 7.26%, #48B4B6 89.5%);;
+  background-image: linear-gradient(170deg, #fff 7.26%, #48b4b6 89.5%);
 }
 
 .bg-gradient-2 {
-  background-image: linear-gradient(170deg, #FFF 7.26%, #808080 89.5%);;
+  background-image: linear-gradient(170deg, #fff 7.26%, #808080 89.5%);
 }
 
 .bg-gradient-3 {
-  background-image: linear-gradient(170deg, #FFF 7.26%, #F1B0B0 89.5%);;
+  background-image: linear-gradient(170deg, #fff 7.26%, #f1b0b0 89.5%);
 }
 
 .bg-gradient-4 {
-  background-image: linear-gradient(170deg, #FFF 7.26%, #169C6A 89.5%);;
+  background-image: linear-gradient(170deg, #fff 7.26%, #169c6a 89.5%);
 }
 
 .bg-gradient-5 {
-  background-image: linear-gradient(170deg, #FFF 7.26%, #F24616 89.5%);;
+  background-image: linear-gradient(170deg, #fff 7.26%, #f24616 89.5%);
 }
 
 .bg-gradient-6 {
-  background-image: linear-gradient(170deg, #FFF 7.26%, #F5BB8D 89.5%);;
+  background-image: linear-gradient(170deg, #fff 7.26%, #f5bb8d 89.5%);
 }
 
 .bg-cover {
@@ -939,12 +974,12 @@ video {
 
 .object-contain {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .object-cover {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .p-0 {
@@ -1057,6 +1092,10 @@ video {
   font-family: overlock;
 }
 
+.font-\[poppins\] {
+  font-family: poppins;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1154,9 +1193,10 @@ video {
 }
 
 .shadow-\[0px_8px_16px_0px_rgba\(0\2c 0\2c 0\2c 0\.2\)\] {
-  --tw-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  --tw-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   --tw-shadow-colored: 0px 8px 16px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-none {
@@ -1165,11 +1205,48 @@ video {
 }
 
 .transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    backdrop-filter,
+    -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+* {
+  font-family: poppins;
+}
+
+::-moz-selection {
+  color: #22a39f;
+}
+
+::selection {
+  color: #22a39f;
 }
 
 .before\:absolute::before {
@@ -1214,7 +1291,7 @@ video {
 }
 
 .before\:content-\[\'\'\]::before {
-  --tw-content: '';
+  --tw-content: "";
   content: var(--tw-content);
 }
 
@@ -1260,8 +1337,13 @@ video {
 }
 
 .after\:content-\[\'\'\]::after {
-  --tw-content: '';
+  --tw-content: "";
   content: var(--tw-content);
+}
+
+.hover\:bg-color_4:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 163 159 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-greyLight:hover {
@@ -1277,6 +1359,11 @@ video {
 .hover\:text-color_6:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.focus\:bg-color_4:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 163 159 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
@@ -1350,7 +1437,7 @@ video {
 
   .lg\:object-cover {
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 
   .lg\:px-14 {
