@@ -10,6 +10,7 @@ dotenv.config();
 import clientRouter from "./routers/client.router.js";
 import dressRouter from "./routers/dress.router.js";
 import userRouter from "./routers/user.router.js";
+import cartRouter from "./routers/cart.router.js";
 
 // All Variables
 const app = express(); // Create an instance of the Express application
@@ -26,6 +27,7 @@ app.use(cors()); // Configure CORS (Cross-Origin Resource Sharing) options
 app.use("/api/client", clientRouter); // Client Router
 app.use("/api/dress", dressRouter); // Dress Router
 app.use("/api/user", userRouter); // User Router
+app.use("/api/carts", cartRouter); // User Router
 
 // Define a route for the root URL
 app.get("/", (req, res) => {
