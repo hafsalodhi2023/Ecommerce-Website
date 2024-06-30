@@ -1,24 +1,17 @@
 import mongoose from "mongoose";
-const Schema = mongoose.Schema;
-
-// Define the color and price schema
-const ColorPriceSchema = new Schema({
-  color: { type: String, required: true },
-  price: { type: Number, required: true },
-  stock: {
-    type: Number,
-    required: true,
-  },
-});
+const { Schema } = mongoose;
 
 // Define the size schemas
 const SizeSchema = new Schema({
   size: {
-    type: String,
+    type: [String],
     enum: ["Small", "Medium", "Large", "XL", "XXL"],
     required: true,
   },
-  colors: [ColorPriceSchema],
+  price: {
+    type: [Number],
+    required: true,
+  },
 });
 
 // Define the stock schema
@@ -60,7 +53,11 @@ const DressSchema = new Schema(
           `${props.value} is not a valid SKU! It should be in the format 'SKU-xxx'.`,
       },
     },
-    sizes: [SizeSchema],
+    sizes: { SizeSchema },
+    color: {
+      type: String,
+      required: true,
+    },
     delieveryCharges: {
       type: Number,
       required: true, // Delievery charges is required

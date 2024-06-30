@@ -7,7 +7,7 @@ const get = async (req, res) => {
   try {
     dbgr("User getting dresses...");
 
-    const { limit, size, color, pricegt, pricelt, ...otherQueries } = req.query; // Destructure limit, size, and other query parameters
+    const { limit, size, pricegt, pricelt, ...otherQueries } = req.query; // Destructure limit, size, and other query parameters
 
     const limitNumber = +limit;
 
@@ -17,16 +17,12 @@ const get = async (req, res) => {
       queryObject["sizes.size"] = size;
     }
 
-    if (color) {
-      queryObject["sizes.colors.color"] = color;
-    }
-
     if (pricegt && pricelt) {
-      queryObject["sizes.colors.price"] = { $gt: +pricegt, $lt: +pricelt };
+      queryObject["sizes.price"] = { $gt: +pricegt, $lt: +pricelt };
     } else if (pricegt) {
-      queryObject["sizes.colors.price"] = { $gt: +pricegt };
+      queryObject["sizes.price"] = { $gt: +pricegt };
     } else if (pricelt) {
-      queryObject["sizes.colors.price"] = { $lt: +pricelt };
+      queryObject["sizes.price"] = { $lt: +pricelt };
     }
     const dress = await Model.find(queryObject).limit(limitNumber); // Find dresses based on query and limit
 
