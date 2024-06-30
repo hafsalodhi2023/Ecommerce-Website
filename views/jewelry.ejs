@@ -1,190 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <style>
-        .shop:hover .nested-ul {
-            display: flex;
-        }
+      .shop:hover .nested-ul {
+        display: flex;
+      }
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!--? Font Awesome Icons Started -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!--` Font Awesome Icons Ended -->
     <!--? Google Fonts Started -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!--` Google Fonts Ended -->
     <!--? Stylesheet Started -->
     <link rel="stylesheet" href="<%= url %>/stylesheets/output.css" />
     <!--` Stylesheet Ended -->
     <!--? Favicon Started -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicons/favicon-16x16.png"
+    />
     <link rel="manifest" href="/images/favicons/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <!--` Favicon Ended -->
     <title>Zubiz Shop</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--? Navbar for Desktop -->
-    <nav class="md:hidden lg:flex w-full z-50 px-8 py-2 flex items-center justify-center ">
-        <div class="left w-[15%] ">
-            <a href="/">
-                <img src="/images/black-logo.png" alt="" class="w-[60px]">
-            </a>
+    <nav
+      class="z-50 flex w-full items-center justify-center px-8 py-2 md:hidden lg:flex"
+    >
+      <div class="left w-[15%]">
+        <a href="/">
+          <img src="/images/black-logo.png" alt="" class="w-[60px]" />
+        </a>
+      </div>
+      <div class="right flex w-[85%] items-center justify-center">
+        <div class="link-div flex w-[55%] items-center justify-center">
+          <ul class="relative flex w-full items-center justify-evenly">
+            <li><a href="/" class="text-xl">Home</a></li>
+            <li class="shop cursor-pointer text-xl">
+              Shop <i class="fa-solid fa-angle-down"></i>
+              <ul
+                class="nested-ul absolute z-20 hidden min-w-[160px] flex-col items-start justify-center bg-color_1 shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)]"
+              >
+                <li
+                  style="transition: 0.6s"
+                  class="w-full cursor-pointer border-b-[1px] border-greyLight hover:bg-greyLight"
+                >
+                  <a
+                    href="/women"
+                    class="block p-[12px_16px] text-left no-underline"
+                    >Women Dresses</a
+                  >
+                </li>
+                <li
+                  style="transition: 0.6s"
+                  class="w-full cursor-pointer border-b-[1px] border-greyLight hover:bg-greyLight"
+                >
+                  <a
+                    href="/men"
+                    class="block p-[12px_16px] text-left no-underline"
+                    >Men Dresses</a
+                  >
+                </li>
+                <li
+                  style="transition: 0.6s"
+                  class="w-full cursor-pointer border-b-[1px] border-greyLight hover:bg-greyLight"
+                >
+                  <a
+                    href="/accessories"
+                    class="block p-[12px_16px] text-left no-underline"
+                    >Bags & Accessories</a
+                  >
+                </li>
+                <li
+                  style="transition: 0.6s"
+                  class="w-full cursor-pointer border-b-[1px] border-greyLight hover:bg-greyLight"
+                >
+                  <a
+                    href="/watches"
+                    class="block p-[12px_16px] text-left no-underline"
+                    >Watches</a
+                  >
+                </li>
+                <li
+                  style="transition: 0.6s"
+                  class="w-full cursor-pointer border-b-[1px] border-greyLight hover:bg-greyLight"
+                >
+                  <a
+                    href="/fragrances"
+                    class="block p-[12px_16px] text-left no-underline"
+                    >Fragrances</a
+                  >
+                </li>
+                <li
+                  style="transition: 0.6s"
+                  class="w-full cursor-pointer border-b-[1px] border-greyLight hover:bg-greyLight"
+                >
+                  <a
+                    href="/jewelry"
+                    class="block p-[12px_16px] text-left no-underline"
+                    >Jewelry</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="/contact" class="text-xl">Contact Us</a></li>
+            <li><a href="/about" class="text-xl">About Us</a></li>
+          </ul>
         </div>
-        <div class="right w-[85%] flex items-center justify-center">
-            <div class="link-div w-[55%] flex items-center justify-center ">
-                <ul class="w-full flex items-center justify-evenly relative">
-                    <li><a href="/" class="text-xl">Home</a></li>
-                    <li class="shop text-xl cursor-pointer">Shop <i class="fa-solid fa-angle-down"></i>
-                        <ul
-                            class="nested-ul z-20 shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)] absolute min-w-[160px] bg-color_1 hidden items-start justify-center flex-col ">
-                            <li style="transition: 0.6s;"
-                                class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
-                                    href="/women" class="p-[12px_16px] no-underline block text-left">Women
-                                    Dresses
-                            <li style="transition: 0.6s;"
-                                class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
-                                    href="/men" class=" p-[12px_16px] no-underline block text-left">Men Dresses
-                                </a></li>
-                            <li style="transition: 0.6s;"
-                                class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
-                                    href="/accessories" class=" p-[12px_16px] no-underline block text-left">Bags &
-                                    Accessories
-
-                                </a></li>
-                            <li style="transition: 0.6s;"
-                                class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
-                                    href="/watches" class=" p-[12px_16px] no-underline block text-left">Watches
-
-                                </a></li>
-                            <li style="transition: 0.6s;"
-                                class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
-                                    href="/fragrances" class=" p-[12px_16px] no-underline block text-left">Fragrances
-
-                                </a></li>
-                            <li style="transition: 0.6s;"
-                                class="hover:bg-greyLight border-greyLight border-b-[1px] cursor-pointer w-full"><a
-                                    href="/jewelry" class=" p-[12px_16px] no-underline block text-left">Jewelry
-
-                                </a></li>
-                        </ul>
-                    </li>
-                    </li>
-                    <li><a href="/contact" class="text-xl">Contact Us </a></li>
-                    <li><a href="/about" class="text-xl">About Us</a></li>
-                </ul>
-            </div>
-            <div class="button-div w-[45%] flex items-center justify-end gap-6">
-
-                <a href="#"
-                    class="rounded-3xl bg-color_3 font-semibold px-14 py-2 font-[Poppins] text-sm  text-color_6">Sign
-                    Up</a>
-                <a href="#"
-                    class="rounded-3xl border-[2px] font-semibold border-color_3 px-14 py-2 font-[Poppins] text-sm text-color_3">Sign
-
-                    In</a>
-
-            </div>
+        <div class="button-div flex w-[45%] items-center justify-end gap-6">
+          <a
+            href="#"
+            class="rounded-3xl bg-color_3 px-14 py-2 font-[Poppins] text-sm font-semibold text-color_6"
+            >Sign Up</a
+          >
+          <a
+            href="#"
+            class="rounded-3xl border-[2px] border-color_3 px-14 py-2 font-[Poppins] text-sm font-semibold text-color_3"
+            >Sign In</a
+          >
         </div>
+      </div>
     </nav>
     <!--` Navbar for Desktop -->
     <!--? Sidebar for mobile Started -->
-    <section id="sidebar" style="transition: 0.6s;" class="fixed top-0 left-[-100%] w-full z-20 h-screen bg-color_1">
-        <!--? Close Button Started -->
-        <i id="close-btn"
-            class="fa-solid fa-xmark absolute top-0 right-0 p-5 text-color_5 text-5xl hover:bg-red hover:text-color_6"></i>
-        <!--` Close Button Ended -->
-        <ul class="w-full h-screen pt-10 pb-10 overflow-y-scroll flex flex-col items-center justify-start gap-10">
-            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
-                    class="fa-solid fa-house text-5xl text-color_2"></i><a href="/"
-                    class="text-5xl text-color_2">Home</a>
-            </li>
-            <li id="shop-btn"
-                class="w-full relative font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2">
-                <i class="fa-solid fa-shop text-5xl text-color_2"></i><span class="text-5xl text-color_2">Shop</span>
-                <i class="fa-solid fa-chevron-down absolute right-0 text-5xl pr-5 text-color_2"></i>
-            <li
-                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
-                <a href="/women" class="text-5xl text-color_2">Women Dresses</a>
-
-            </li>
-            <li
-                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
-                <a href="/men" class="text-5xl text-color_2">Men Dresses</a>
-
-            </li>
-            <li
-                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
-                <a href="/accessories" class="text-5xl text-color_2">Bags & Accessories</a>
-
-            </li>
-            <li
-                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
-                <a href="/watches" class="text-5xl text-color_2">Watches</a>
-
-            </li>
-            <li
-                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
-                <a href="/fragrances" class="text-5xl text-color_2">Fragrances</a>
-
-            </li>
-            <li
-                class="shop_sub w-full border-b-2 border-grey  items-center justify-start gap-10 pl-[120px] py-2 hidden">
-                <a href="/jewelry" class="text-5xl text-color_2">Jewelry</a>
-
-            </li>
-            </li>
-            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
-                    class="fa-solid fa-user text-5xl text-color_2"></i><a href="/contact"
-                    class="text-5xl text-color_2">Contact
-                    Us</a>
-            </li>
-            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
-                    class="fa-solid fa-envelope text-5xl text-color_2"></i><a href="/about"
-                    class="text-5xl text-color_2">About
-                    Us</a>
-            </li>
-            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
-                    class="fa-solid fa-right-to-bracket text-5xl text-color_2"></i><a href=""
-                    class="text-5xl text-color_2">Login</a>
-            </li>
-            <li class="w-full font-semibold border-b-2 border-grey  flex items-center justify-start gap-10 pl-5 py-2"><i
-                    class="fa-solid fa-user-plus text-5xl text-color_2"></i><a href=""
-                    class="text-5xl text-color_2">Sign
-                    Up</a>
-            </li>
-        </ul>
+    <section
+      id="sidebar"
+      style="transition: 0.6s"
+      class="fixed left-[-100%] top-0 z-20 h-screen w-full bg-color_1"
+    >
+      <!-- Close Button Started -->
+      <i
+        id="close-btn"
+        class="fa-solid fa-xmark absolute right-0 top-0 p-5 text-5xl text-color_5 hover:bg-red hover:text-color_6"
+      ></i>
+      <!-- Close Button Ended -->
+      <ul
+        class="flex h-screen w-full flex-col items-center justify-start gap-10 overflow-y-scroll pb-10 pt-10"
+      >
+        <li
+          class="flex w-full items-center justify-start gap-10 border-b-2 border-grey py-2 pl-5 font-semibold"
+        >
+          <i class="fa-solid fa-house text-5xl text-color_2"></i
+          ><a href="/" class="text-5xl text-color_2">Home</a>
+        </li>
+        <li
+          id="shop-btn"
+          class="relative flex w-full items-center justify-start gap-10 border-b-2 border-grey py-2 pl-5 font-semibold"
+        >
+          <i class="fa-solid fa-shop text-5xl text-color_2"></i
+          ><span class="text-5xl text-color_2">Shop</span>
+          <i
+            class="fa-solid fa-chevron-down absolute right-0 pr-5 text-5xl text-color_2"
+          ></i>
+        </li>
+        <li
+          class="shop_sub hidden w-full border-b-2 border-grey py-2 pl-[120px]"
+        >
+          <a href="/women" class="text-5xl text-color_2">Women Dresses</a>
+        </li>
+        <li
+          class="shop_sub hidden w-full border-b-2 border-grey py-2 pl-[120px]"
+        >
+          <a href="/men" class="text-5xl text-color_2">Men Dresses</a>
+        </li>
+        <li
+          class="shop_sub hidden w-full border-b-2 border-grey py-2 pl-[120px]"
+        >
+          <a href="/accessories" class="text-5xl text-color_2"
+            >Bags & Accessories</a
+          >
+        </li>
+        <li
+          class="shop_sub hidden w-full border-b-2 border-grey py-2 pl-[120px]"
+        >
+          <a href="/watches" class="text-5xl text-color_2">Watches</a>
+        </li>
+        <li
+          class="shop_sub hidden w-full border-b-2 border-grey py-2 pl-[120px]"
+        >
+          <a href="/fragrances" class="text-5xl text-color_2">Fragrances</a>
+        </li>
+        <li
+          class="shop_sub hidden w-full border-b-2 border-grey py-2 pl-[120px]"
+        >
+          <a href="/jewelry" class="text-5xl text-color_2">Jewelry</a>
+        </li>
+        <li
+          class="flex w-full items-center justify-start gap-10 border-b-2 border-grey py-2 pl-5 font-semibold"
+        >
+          <i class="fa-solid fa-user text-5xl text-color_2"></i
+          ><a href="/contact" class="text-5xl text-color_2">Contact Us</a>
+        </li>
+        <li
+          class="flex w-full items-center justify-start gap-10 border-b-2 border-grey py-2 pl-5 font-semibold"
+        >
+          <i class="fa-solid fa-envelope text-5xl text-color_2"></i
+          ><a href="/about" class="text-5xl text-color_2">About Us</a>
+        </li>
+        <li
+          class="flex w-full items-center justify-start gap-10 border-b-2 border-grey py-2 pl-5 font-semibold"
+        >
+          <i class="fa-solid fa-right-to-bracket text-5xl text-color_2"></i
+          ><a href="" class="text-5xl text-color_2">Login</a>
+        </li>
+        <li
+          class="flex w-full items-center justify-start gap-10 border-b-2 border-grey py-2 pl-5 font-semibold"
+        >
+          <i class="fa-solid fa-user-plus text-5xl text-color_2"></i
+          ><a href="" class="text-5xl text-color_2">Sign Up</a>
+        </li>
+      </ul>
     </section>
     <!--` Sidebar for mobile Ended -->
     <!--? Nav for mobile Started -->
     <nav class="flex w-full items-center justify-center px-2 py-2 lg:hidden">
-        <div class="ml-2 mr-2 flex w-1/3 items-center justify-start">
-            <i id="hamburger" class="fa-solid fa-bars-staggered text-5xl text-color_3"></i>
-        </div>
-        <div class="m-2 flex w-1/3 items-center justify-center">
-            <img src="/images/logo.png" alt="Logo" class="w-20" />
-        </div>
-        <div class="ml-2 mr-2 flex w-1/3 items-center justify-end">
-            <i class="fa-solid fa-cart-shopping text-5xl text-color_3"></i>
-        </div>
+      <div class="ml-2 mr-2 flex w-1/3 items-center justify-start">
+        <i
+          id="hamburger"
+          class="fa-solid fa-bars-staggered text-5xl text-color_3"
+        ></i>
+      </div>
+      <div class="m-2 flex w-1/3 items-center justify-center">
+        <img src="/images/logo.png" alt="Logo" class="w-20" />
+      </div>
+      <div class="ml-2 mr-2 flex w-1/3 items-center justify-end">
+        <i class="fa-solid fa-cart-shopping text-5xl text-color_3"></i>
+      </div>
     </nav>
     <!--` Nav for mobile Ended -->
     <h1
-        class=" relative z-10 flex items-center justify-center text-6xl text-center bg-color_4 text-color_6 py-5 font-bold font-[overlock]">
-        Jewelry <i class="fa-solid fa-filter text-3xl text-color_6 absolute right-0 px-5"></i>
+      class="relative z-10 flex items-center justify-center bg-color_4 py-5 text-center font-[overlock] text-6xl font-bold text-color_6"
+    >
+      Jewelry
+      <i
+        class="fa-solid fa-filter absolute right-0 px-5 text-3xl text-color_6"
+      ></i>
     </h1>
-</body>
-<script src="/javascripts/index.js"></script>
-
+  </body>
+  <script src="/javascripts/index.js"></script>
 </html>

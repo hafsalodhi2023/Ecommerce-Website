@@ -15,8 +15,6 @@ export default {
       red: "#FF0000",
       grey: "#b3b1b0",
       greyLight: "#808080",
-      
-
     },
     extend: {
       backgroundImage: {

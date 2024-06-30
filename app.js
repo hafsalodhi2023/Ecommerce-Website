@@ -64,6 +64,10 @@ app.get("/about", (req, res) => {
   res.render("about", { url: "http://localhost:8080" }); // Render the "index" view
 });
 
+app.get("/product-details", (req, res) => {
+  res.render("product-details", { url: "http://localhost:8080" }); // Render the "index" view
+});
+
 // Start the server and listen on port 3000
 app.listen(8080, () => {
   dbgr("Server is running on port 8080"); // Log a message when the server starts

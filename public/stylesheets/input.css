@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: poppins;
+}
+
+::selection {
+  color: #22a39f;
+}
